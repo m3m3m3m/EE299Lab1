@@ -1,16 +1,83 @@
-\documentclass[letterpaper]{article}
+\documentclass[12pt,letterpaper,onecolumn]{article}
 \usepackage{mathptmx}
-\newcommand{\titlefont}{\fontsize{16pt}\selectfont}
-\newcommand{\authorfont}{\fontsize{14pt}\selectfont}
-\newcommand{\zwfont}{\fontsize{12pt}\selectfont}
-\newcommand{\codefont}{\fontsize{11pt}\selectfont}
+\newcommand{\titlefont}{\fontfamily{ptm}\fontseries{b}\fontsize{16pt}{\baselineskip}\selectfont}
+\newcommand{\authorfont}{\fontfamily{ptm}\fontseries{b}\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\zwfont}{\fontfamily{ptm}\fontsize{12pt}{\baselineskip}\selectfont}
+\newcommand{\codefont}{\fontfamily{phv}\fontsize{11pt}{\baselineskip}\selectfont}
+\newcommand{\majorhead}{\fontfamily{ptm}\fontseries{b}\fontsize{12pt}{\baselineskip}\selectfont}
 \usepackage{geometry}
 \geometry{left = 1.0in,right = 1.0in,top = 1.0in,bottom = 1.0in}
-\title{Report for Lab 1}
-\author[fontsize = 14pt]{Muhan Li \and Man Sun \and Mingxiao An}
+\title{\titlefont Report for Lab 1}
+\author{\authorfont Muhan Li,Man Sun,Mingxiao An}
 \date{}
 \begin{document}
 	\maketitle
-	
-	content...
+	\tableofcontents
+	\section*{\majorhead Abstract}	
+	%	The abstract should provide a brief overview of the report - one paragraph at most. 
+	%	
+	%	It should provide a summary of the main specific points for the introduction, the main tests and experiments, the results, and the conclusions. It is called an abstract because you can literally "abstract" sentences from the other sections. 
+	%	
+	%	Once again, this is not a narrative of your experiences as you executed the design.  The abstract should mirror (albeit in a very condensed way) the content of your report.	
+		\input{abstract}
+	\section*{\majorhead Introduction}
+	%	Brief introduction and overview of the purpose of the lab and of the methods and tools used - one to two paragraphs at most.
+		\input{intro}
+	\section*{\majorhead Discussion of the Lab}
+	%	This section should include the following:
+	%	
+	%	Brief Design Specification - In this subsection you will textually describe your client's requirements.  What does he or she need in the project you are developing.  If you are incorporating extra features or capabilities, please describe them clearly in this section.
+	%	
+	%	Overall summary description of the module - 2-3 paragraphs maximum
+	%	
+	%	Specification of the public interface to the module
+	%	
+	%	Inputs
+	%	Outputs
+	%	Side effects - what outside variables did the module change
+	%	
+	%	Pseudo English description of algorithms, functions, or procedures
+	%	Error handling
+	%	
+	%	Hardware Implementation
+	%	
+	%	Draw the schematic / logic diagram of how you connected the parts...switches, chips, LEDs etc.
+	%	
+	%	Use standard symbols for simple electronic parts and appropriately labeled boxes for larger parts. Should be a cleaned-up "picture" of what your breadboard and components actually look like
+	%	
+	%	Do not actually take a picture and submit this.
+	%	
+	%	Software Implementation
+	%	
+	%	What is your design????
+	%	
+	%	Present your design starting from a top level functional view and potentially block diagram or high level architecture. 
+	%	
+	%	Refine that view to present and explain each of the modules that comprise the major functional blocks. 
+	%	
+	%	Discuss the flow of control through the design. 
+	%	
+	%	Identify and discuss the specific modules you have implemented in your design. Explain your design choices.    
+		\input{labdisc}
+	\section*{\majorhead Testplan}
+	%	Overall summary of what needs to be tested to ensure that your design meets the original requirements, 2-3 paragraphs maximum unless specified otherwise   
+		\input{testplan}
+	\section*{\majorhead Presentation, Discussion, and Analysis of the Results}
+	%	Based upon the execution of your design, present your results. Explain them and what was expected, and draw any conclusions (for example, did this prove your design worked).
+	%	
+	%	In addition to a detailed discussion and analysis of your project and your results, you must include all the answers to all questions raised in the lab.
+		\input{result}
+	\section*{\majorhead Analysis of any Errors}
+	%	This one is obvious. Do this section as appropriate.  If it improves the flow, it does not need to be a separate section and may be included in the presentation, discussion, and analysis of the results.  However, it will still be graded separately and must be present.
+		\input{error}
+	\section*{\majorhead Analysis of Why the Project May not of Worked and What Efforts Were Made to Identify the Root Cause of any Problems}
+	%	State any problems you encountered while working on the project. If your project did not work or worked only partially, provide an analysis of why and what efforts were made to identify the root cause of any problems. Should be written only if your project (or a required component) did not work. 
+		\input{probs}
+	\section*{\majorhead Summary and Conclusion}
+	%	You should know these sections very well, no need to explain.  Note, however, that they are two different sections.  The summary is just that, a summary of your project.  It should loosely mirror the abstract with a bit more detail.  The conclusion concludes the report, potentially adds information that is often outside the main thrust of the report, and may offer suggestions or recommendations about the project.
+		\input{sum}
+	\section*{\majorhead Appendices}
+	%	Your final version of any and all pseudocode and C code should go in this section. 
+		\input{code}
+		
 \end{document}
