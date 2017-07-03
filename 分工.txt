@@ -1,0 +1,6 @@
+files to be finished for each part: labdisc,result,error(if any),probs(if any),sum,code(can be found in AllCodes/)
+[part]
+BLINK:Muhan Li
+LCD:Man Sun
+Communicate:Mingxiao An 
+
