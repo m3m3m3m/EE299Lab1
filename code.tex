@@ -1,0 +1,230 @@
+In this section, we will show all of our Arduino code that were developed and used in this lab.
+\lstset{language=C}
+\begin{lstlisting}[caption = blink1.ino]
+// Pin 13
+int led = 13;
+
+// the setup routine runs once when you press reset:
+void setup() 
+{                
+	// initialize the digital pin as an output.
+	pinMode(led, OUTPUT);     
+}
+
+// the loop routine runs over and over again forever:
+void loop() 
+{
+	digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	delay(2000);               // wait for two seconds
+	digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+	delay(1000);               // wait for a second
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = blink2.ino]
+// Pin 13 
+int led = 13;
+
+// the setup routine runs once when you press reset:
+void setup() 
+{                
+	// initialize the digital pin as an output.
+	pinMode(led, OUTPUT);     
+}
+
+// the loop routine runs over and over again forever:
+void loop() 
+{
+	digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	delay(1000);               // wait for a second
+	digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+	delay(1000);               // wait for a second
+	digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	delay(1000);               // wait for a second
+	digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+	delay(1000);               // wait for a second
+	
+	digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	delay(2000);               // wait for two seconds
+	digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+	delay(1000);               // wait for a second
+	digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	delay(2000);               // wait for two seconds
+	digitalWrite(led, LOW);    // turn the LED off by making the voltage LOW
+	delay(1000);               // wait for a second
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = blink3.ino]
+// LED Pin 8
+int led = 8;
+
+// Button Pin 9
+int button = 9;
+
+// the setup routine runs once when you press reset:
+void setup() 
+{
+	// initialize the digital pin as an output.
+	pinMode(led, OUTPUT);     
+	// 
+	pinMode(button, INPUT);
+}
+
+// the loop routine runs over and over again forever:
+void loop() 
+{
+	if (digitalRead(button)) 
+	{
+		digitalWrite(led, HIGH);   // turn the LED on (HIGH is the voltage level)
+	} 
+	else 
+	{
+		digitalWrite(led, LOW);   // turn the LED off
+	}
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = LCD1.ino]
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7, 8); // Bus 1
+
+void setup() 
+{
+	lcd.begin(16, 2); // 16 * 2 character
+	
+	lcd.print("Man Muhan");
+	lcd.setCursor(0, 1);
+	lcd.print("Mingxiao");
+}
+
+void loop() 
+{
+	// do nothing
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = LCD2.ino]
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7, 8); // port 1
+int buttonLeft = 10;
+int buttonRight = 9;
+int col = 0;
+int row = 0;
+
+
+void moveLeft() 
+{
+	lcd.clear();
+	if (col > 1) col -= 1;
+	else if (row > 0) 
+	{
+		row -= 1;
+		col = 16;
+	}
+	lcd.setCursor(col, row);
+	lcd.print("X");
+}
+
+void moveRight() 
+{
+	lcd.clear();
+	if (col < 16)
+	col += 1;
+	else 
+	{
+		row += 1;
+		col = 1;
+	}
+	lcd.setCursor(col, row);
+	lcd.print("X");
+}
+
+void setup() 
+{
+	pinMode(buttonLeft, INPUT);
+	pinMode(buttonRight, INPUT);
+	lcd.begin(16, 2); // 16 * 2 character
+	lcd.autoscroll();
+	//  lcd.cursor();
+	moveRight();
+}
+
+void loop() 
+{
+	if (digitalRead(buttonLeft)) 
+	{
+		moveLeft();
+		delay(300);
+	}
+	if (digitalRead(buttonRight)) 
+	{
+		moveRight();
+		delay(300);
+	}
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = 12i2cm.ino]
+#include <Wire.h>
+
+void setup()
+{
+	Wire.begin();         // join i2c bus (address optional for master)
+	Serial.begin(9600);       // start serial for output
+}
+
+byte lightOn = 1;
+
+void loop()
+{
+	Wire.beginTransmission(4);  // transmit to device #4
+	Wire.write(lightOn);      // send the signal of whether the LED is on
+	
+	Wire.endTransmission();     // stop transmitting
+	if(lightOn == 1)
+	{
+		Serial.print("LED on\n");
+		lightOn = 0;
+	}
+	else 
+	{
+		Serial.print("LED off\n");
+		lightOn = 1;
+	}
+	delay(500);
+}
+\end{lstlisting}
+\begin{lstlisting}[caption = 12i2cs.ino]
+#include <Wire.h>
+// Pin 13
+int led = 13;
+void setup()
+{
+	Wire.begin(4);         // join i2c bus with address #4
+	Wire.onReceive(receiveEvent); // register event
+	Serial.begin(9600);       // start serial for output
+	pinMode(led,OUTPUT);
+}
+void loop()
+{
+	delay(100);
+}
+// function that executes whenever data is received from master
+// this function is registered as an event, see setup()
+void receiveEvent(int howMany)
+{
+	while(1 <Wire.available())  // loop through all but the last
+	{
+		Serial.print("received");
+		bool on = Wire.read();    // receive byte as a character
+		if(on)
+		{
+			digitalWrite(led,HIGH);
+			Serial.print("LED on\n");
+		}
+		else
+		{
+			digitalWrite(led,LOW);
+			Serial.print("LED off\n");
+		}
+	}
+}
+\end{lstlisting}
