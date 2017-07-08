@@ -2,8 +2,8 @@
 \contentsline {section}{\numberline {2}Introduction}{3}
 \contentsline {section}{\numberline {3}Discussion of the Lab}{3}
 \contentsline {section}{\numberline {4}Testplan}{3}
-\contentsline {section}{\numberline {5} Presentation, Discussion, and Analysis of the Results}{3}
+\contentsline {section}{\numberline {5}Presentation, Discussion, and Analysis of the Results}{3}
 \contentsline {section}{\numberline {6}Analysis of any Errors}{3}
 \contentsline {section}{\numberline {7}Analysis of Why the Project May not of Worked and What Efforts Were Made to Identify the Root Cause of any Problems}{3}
-\contentsline {section}{\numberline {8} Summary and Conclusion}{3}
+\contentsline {section}{\numberline {8}Summary and Conclusion}{3}
 \contentsline {section}{\numberline {9}Appendices}{3}
