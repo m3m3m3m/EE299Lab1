@@ -5,7 +5,14 @@ In part 2, we will need a module that can work with the LCD and two modules that
 \subsubsection{Specification of the public interface to the module}
 
 \paragraph{Input, Output and Side Effects}
-\subparagraph{Part 1}
+\subparagraph{lab 1 \& 2}
+There is no input in this program. The output is the blinking of LED on the board, which follows a pattern we set before. 
+\subparagraph{lab 3 \& 4}
+This part is much like the one above, with the output device here being an LED brick instead of onboard LED. It blinks in two ways under the control of the program.
+\subparagraph{lab 5}
+We have connected a button brick to the board so whether it is pushed or not becomes the input signal. The output is the blinking of the LED brick, which is controlled by the brick.
+\subparagraph{lab 6 \& 7}
+In this part we are trying to use the processor output, so output is the information through serial. Program 6 prints some preset words on the serial monitor and Program 7 prints our own stuff. There is no input.
 \subparagraph{lab 8} 
 No input is required, the output is the LCD connected to the microprocessor printing two names on the first row of the display and one on the second.
 \subparagraph{lab 9}
@@ -15,6 +22,46 @@ No input is required, and the output is detected on the Serial Monitor on the PC
 \subparagraph{lab 11}
 The input is controlled by a peripheral button brick connected to the master microprocessor, and the output is the peripheral LED connected to the slaver microprocessor being turned on when the button is pressed, and turned off when the button is released.
 \paragraph{Pseudo English description of algorithms, functions, or procedures}
+\subparagraph{lab 1 \& 3}
+set LED as output;
+loop while true\{
+	set the voltage high;
+	wait for 2 seconds;
+	set the voltage low;
+	wait for 1 second;
+\}
+\subparagraph{lab 2 \& 4}
+set LED as output;
+loop while true\{
+	two-second blink;
+	one-second blink;
+	two-second blink;
+	two-second blink;
+\}
+\subparagraph{lab 5}
+set LED as output;
+set button as input;
+loop while true\{
+	if (button pushed)\{
+		LED on;
+	\}
+	else\{
+		LED off;
+	\}
+\}
+\subparagraph{lab 6}
+set an integer;
+start serial port;
+loop while true\{
+	serial print "hello world";
+	serial printline i;
+	wait 1 second;
+	serial printline "how ya doin";
+	wait 1 second;
+\}
+\subparagraph{lab 7}
+start serial port;
+serial printline some own stuff;
 \subparagraph{lab 8}
 print the name of first two members;
 move the cursor to the first column of the second row;
@@ -43,4 +90,3 @@ if the button is pressed, the master sends a byte string representing that the l
 	\caption{Schematic of hardware implementation(developed using Fritzing)}
 \end{figure}
 %\subsection{Software Implementation}
-
