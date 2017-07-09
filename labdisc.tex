@@ -23,9 +23,49 @@ No input is required, and the output is detected on the Serial Monitor on the PC
 \subparagraph{lab 11}
 The input is controlled by a peripheral button brick connected to the master microprocessor, and the output is the peripheral LED connected to the slaver microprocessor being turned on when the button is pressed, and turned off when the button is released.
 \paragraph{Pseudo English description of algorithms, functions, or procedures}
+\subparagraph{lab 1 \& 3}
+set LED as output;
+loop while true\{
+	set the voltage high;
+	wait for 2 seconds;
+	set the voltage low;
+	wait for 1 second;
+\}
+\subparagraph{lab 2 \& 4}
+set LED as output;
+loop while true\{
+	two-second blink;
+	one-second blink;
+	two-second blink;
+	two-second blink;
+\}
+\subparagraph{lab 5}
+set LED as output;
+set button as input;
+loop while true\{
+	if (button pushed)\{
+		LED on;
+	\}
+	else\{
+		LED off;
+	\}
+\}
+\subparagraph{lab 6}
+set an integer;
+start serial port;
+loop while true\{
+	serial print "hello world";
+	serial printline i;
+	wait 1 second;
+	serial printline "how ya doin";
+	wait 1 second;
+\}
+\subparagraph{lab 7}
+start serial port;
+serial printline some own stuff;
 \subparagraph{lab 8}
-print the name of first two members;
-move the cursor to the first column of the second row;
+print the name of first two members;\\
+move the cursor to the first column of the second row;\\
 print the name of the third member;
 \subparagraph{lab 9}
 

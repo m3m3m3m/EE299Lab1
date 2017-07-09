@@ -1,0 +1,34 @@
+\contentsline {section}{\numberline {1}Abstract}{3}
+\contentsline {section}{\numberline {2}Introduction}{3}
+\contentsline {section}{\numberline {3}Discussion of the Lab}{3}
+\contentsline {subsection}{\numberline {3.1}Brief Design Specification}{3}
+\contentsline {subsubsection}{\numberline {3.1.1}Overall summary description of the module}{3}
+\contentsline {subsubsection}{\numberline {3.1.2}Specification of the public interface to the module}{3}
+\contentsline {paragraph}{Input, Output and Side Effects}{3}
+\contentsline {subparagraph}{Part 1}{3}
+\contentsline {subparagraph}{lab 1 \& 2}{3}
+\contentsline {subparagraph}{lab 3 \& 4}{3}
+\contentsline {subparagraph}{lab 5}{3}
+\contentsline {subparagraph}{lab 6 \& 7}{3}
+\contentsline {subparagraph}{lab 8}{3}
+\contentsline {subparagraph}{lab 9}{3}
+\contentsline {subparagraph}{lab 10}{4}
+\contentsline {subparagraph}{lab 11}{4}
+\contentsline {paragraph}{Pseudo English description of algorithms, functions, or procedures}{4}
+\contentsline {subparagraph}{lab 1 \& 3}{4}
+\contentsline {subparagraph}{lab 2 \& 4}{4}
+\contentsline {subparagraph}{lab 5}{4}
+\contentsline {subparagraph}{lab 6 \& 7}{4}
+\contentsline {subparagraph}{lab 8}{4}
+\contentsline {subparagraph}{lab 9}{4}
+\contentsline {paragraph}{Error handling}{4}
+\contentsline {subsection}{\numberline {3.2}Hardware Implementation}{4}
+\contentsline {subsection}{\numberline {3.3}Software Implementation}{4}
+\contentsline {section}{\numberline {4}Testplan}{4}
+\contentsline {paragraph}{Testplan for part 1}{4}
+\contentsline {paragraph}{Testplan for part 2}{5}
+\contentsline {section}{\numberline {5}Presentation, Discussion, and Analysis of the Results}{5}
+\contentsline {section}{\numberline {6}Analysis of any Errors}{5}
+\contentsline {section}{\numberline {7}Analysis of Why the Project May not of Worked and What Efforts Were Made to Identify the Root Cause of any Problems}{5}
+\contentsline {section}{\numberline {8}Summary and Conclusion}{5}
+\contentsline {section}{\numberline {9}Appendices}{5}
