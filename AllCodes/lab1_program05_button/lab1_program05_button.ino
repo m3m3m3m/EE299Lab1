@@ -17,8 +17,8 @@
 
 // the setup routine runs once when you press reset:
 void setup() {
-    pinMode(LED, OUTPUT);       // initialize the digital pin as an output.
-    pinMode(BUTTON, INPUT);     // initialize the digital pin as an input.
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+    pinMode(BUTTON, INPUT);     // initialize the digital pin as an input
 }
 
 // the loop routine runs over and over again forever:
