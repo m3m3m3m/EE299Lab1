@@ -8,7 +8,6 @@
 //      to Europe, based on the problem in assignment 1, to the 
 //      serial monitor.
 //  Author:
-//      Forked from example code in the public domain
 //      Man Sun, Mingxiao An, Muhan Li
 //  Rev.0 26 June 2017
 //  Rev.1 8 July 2017
