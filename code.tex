@@ -1,0 +1,424 @@
+\subsection{program01:blink}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program01_blink.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program controls the on-board LED so that the LED is 
+//      on for 2 seconds and off for 1 second and repeats. On the
+//      UNO, the on-board LED is attached to digital pin 13.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#define LED 13                  // pin 13 is the pin attaching the on-board LED
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+}
+\end{minted}
+
+\subsection{program02:blink}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program02_blink.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program controls the on-board LED so that the LED has 
+//      two 1 second blinks followed by two 2 second blinks and then
+//      repeats. On the UNO, the on-board LED is attached to digital
+//      pin 13.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#define LED 13                  // pin 13 is the pin attaching the on-board LED
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    // the first 1 second blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(1000);                // wait for a second
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+    // the second 1 second blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(1000);                // wait for a second
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+    // the first 2 seconds blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(2000);                // wait for two seconds
+    // the second 2 seconds blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(2000);                // wait for two seconds
+}
+\end{minted}
+
+\subsection{program03:blink}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program03_blink.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program controls the peripheral LED so that the LED is 
+//      on for 2 seconds and off for 1 second and repeats. We assume
+//      that the digital port of led is pin 10.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#define LED 10                  // pin 10 is the pin attaching the peripheral LED
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+}
+\end{minted}
+
+\subsection{program04:blink}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program04_blink.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program controls the peripheral LED so that the LED has 
+//      two 1 second blinks followed by two 2 second blinks and then
+//      repeats. We assume that the digital port of led is pin 10.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#define LED 10                  // pin 10 is the pin attaching the peripheral LED
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    // the first 1 second blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(1000);                // wait for a second
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+    // the second 1 second blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(1000);                // wait for a second
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(1000);                // wait for a second
+    // the first 2 seconds blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(2000);                // wait for two seconds
+    // the second 2 seconds blink
+    digitalWrite(LED, HIGH);    // turn the LED on by making the voltage HIGH
+    delay(2000);                // wait for two seconds
+    digitalWrite(LED, LOW);     // turn the LED off by making the voltage LOW
+    delay(2000);                // wait for two seconds
+}
+\end{minted}
+
+\subsection{program05:button}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program05_blink.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program allows one to use a button attaching to digital
+//		pin 12 to control a LED at digital pin 10.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#define LED 10                  // pin 10 is the pin attaching the LED
+#define BUTTON 12               // pin 12 is the pin attaching the button
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);       // initialize the digital pin as an output
+    pinMode(BUTTON, INPUT);     // initialize the digital pin as an input
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    if (digitalRead(BUTTON)) {      // on button pressed
+        digitalWrite(LED, HIGH);    // turn the LED on
+    } else {                        // on button released
+        digitalWrite(LED, LOW);     // turn the LED off
+    }
+}
+\end{minted}
+
+\subsection{program07:price}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program07_price.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program prints the result of how much to pay for a trip
+//      to Europe, based on the problem in assignment 1, to the 
+//      serial monitor.
+//  Author:
+//      Man Sun, Mingxiao An, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+// the setup routine runs once when you press reset:
+void setup() {
+    Serial.begin(9600);             // start serial port at 9600 bps
+    int pnum = 9;                   // number of people
+    float cost = 977.5f;            // unit cost per person
+    float discount = .95f;          // discount rate
+    float tax = 1.095f;             // tax rate
+    float res = pnum * cost * discount * tax;
+
+    // print the result to the serial monitor:
+    Serial.print("The total price of the trip is $");
+    Serial.println(res);
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    // nothing to do
+}
+\end{minted}
+
+\subsection{program08:lcd}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program08_lcd.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program prints the names of our group on the LCD, with
+//      two names on the first row of the display and one on the
+//      second.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7, 8);     // Bus 1 of the Seeduino sensor Chasis
+
+// the setup routine runs once when you press reset:
+void setup() {
+    lcd.begin(16, 2);           // 16 * 2 character
+    lcd.print("Man & Muhan");   // print two names on the first row
+    lcd.setCursor(0, 1);        // set the cursor to the beginning of the second row
+    lcd.print("Mingxiao");      // print one name
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    // nothing to do
+}
+\end{minted}
+
+\subsection{program09:lcd}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program09_lcd.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program allows buttons to control the cursur of lcd. One
+//      button moves the cursor left when pressed, the other moves
+//      the cursor right. 
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 26 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#include <LiquidCrystal.h>
+
+LiquidCrystal lcd(2, 3, 4, 5, 6, 7, 8); // Bus 1 of the Seeduino sensor Chasis
+#define BUTTON_LEFT 11          // pin 11 is the pin attaching the move-left button
+#define BUTTON_RIGHT 12         // pin 12 is the pin attaching the move-right button
+int col = 0;                            // column of where the cursor should be
+int row = 0;                            // row of where the cursor should be
+
+void moveLeft() {                       // move the cursor left
+    lcd.clear();                        // clear the output 'X' on lcd
+    if (col > 1)                        // if the cursor is not at the leftmost
+        col -= 1;                       // the cursor goes left by 1
+    else if (row > 0) {                 // if the cursor is not at the topmost
+        row -= 1;                       // the cursor goes up by 1 
+        col = 16;                       // the cursor goes to the rightmost
+    }
+    lcd.setCursor(col, row);            // apply the position change of the cursor
+    lcd.print("X");                     // print "X" to the LCD
+}
+
+void moveRight() {
+    lcd.clear();                        // clear the output 'X' on lcd
+    if (col < 16)                       // if the cursor is not at the rightmost
+        col += 1;                       // the cursor goes right by 1
+    else {
+        row += 1;                       // the cursor goes down by 1 
+        col = 1;                        // the cursor goes to the leftmost
+    }
+    lcd.setCursor(col, row);            // apply the position change of the cursor
+    lcd.print("X");                     // print "X" to the LCD
+}
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(BUTTON_LEFT, INPUT);         // initialize the digital pin as an input
+    pinMode(BUTTON_RIGHT, INPUT);        // initialize the digital pin as an input
+    lcd.begin(16, 2);                    // 16 * 2 character
+    lcd.autoscroll();                    // setup autoscroll 
+    // so that the display will automatically move up & down with the cursor
+    moveRight();                         // move the cursor right at first and print "X"
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    if (digitalRead(BUTTON_LEFT)) {      // on buttonLeft pressed
+        moveLeft();                      // move left the cursor
+        delay(300);                      // delay 0.3s
+    }
+    if (digitalRead(BUTTON_RIGHT)) {     // on buttonRight pressed
+        moveRight();                     // move right the cursor
+        delay(300);                      // delay 0.3s
+    }
+}
+\end{minted}
+
+\subsection{program11:i2cm}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program11_i2cm.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program is deployed on the master of the I2C wire. The
+//      master device send signals of its button to the slave device,
+//      controlling it to switch on or off its LED.
+//  Author:
+//      Mingxiao An, Man Sun, Muhan Li
+//  Rev.0 28 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#include <Wire.h>
+
+#define I2C 4       // using analog port 4 as i2c bus, port 5 should also be connected
+#define BUTTON 12   // pin 12 is the pin attaching the button
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(BUTTON, INPUT);     // initialize the digital pin as an input
+    Wire.begin();               // join i2c bus (address optional for master)
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    Wire.beginTransmission(I2C);            // transmit to device #4
+    Wire.write(digitalRead(BUTTON) != 0);   // send the signal of the button cond
+    Wire.endTransmission();                 // stop transmitting
+}
+\end{minted}
+
+\subsection{program11:i2cs}
+\begin{minted}{c}
+//----------------------------------------------------------------
+//  Module name:
+//      lab1_program11_i2cs.ino
+//  Languange:
+//      Wiring/Arduino
+//  Description:
+//      The program is deployed on the slave of the I2C wire. The
+//      device receive signals from I2C wire, and switch on or off 
+//      its LED by the result of the signals. 
+//  Author:
+//      Man Sun, Mingxiao An, Muhan Li
+//  Rev.0 28 June 2017
+//  Rev.1 8 July 2017
+//----------------------------------------------------------------
+
+#include <Wire.h>
+
+#define I2C 4       // using analog port 4 as i2c bus, port 5 should also be connected
+#define LED 10      // pin 10 is the pin attaching the LED
+
+// the setup routine runs once when you press reset:
+void setup() {
+    pinMode(LED, OUTPUT);           // initialize the digital pin as an output
+    Wire.begin(I2C);                // join i2c bus with address #4
+    Wire.onReceive(receiveEvent);   // register event
+}
+
+// the loop routine runs over and over again forever:
+void loop() {
+    delay(100);
+}
+
+// this function is registered as an event:
+void receiveEvent(int howMany) {
+    byte on = Wire.read();              // read the input as byte
+    if (on) {
+        digitalWrite(LED, HIGH);        // turn the LED on
+    } else {
+        digitalWrite(LED, LOW);         // turn the LED off
+    }
+}
+\end{minted}

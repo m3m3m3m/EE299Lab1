@@ -27,7 +27,7 @@ void setup() {
 // the loop routine runs over and over again forever:
 void loop() {
     Wire.beginTransmission(I2C);                // transmit to device #4
-    Wire.write(digitalRead(BUTTON) != 0);       // send the signal of whether the LED is on
+    Wire.write(digitalRead(BUTTON) != 0);       // send the signal of the button cond
     Wire.endTransmission();                     // stop transmitting
 }
 

@@ -21,7 +21,7 @@
 // the setup routine runs once when you press reset:
 void setup() {
     pinMode(LED, OUTPUT);           // initialize the digital pin as an output
-    Wire.begin(I2C);                  // join i2c bus with address #4
+    Wire.begin(I2C);                // join i2c bus with address #4
     Wire.onReceive(receiveEvent);   // register event
 }
 

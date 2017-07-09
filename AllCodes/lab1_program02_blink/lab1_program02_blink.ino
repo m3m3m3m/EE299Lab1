@@ -19,7 +19,6 @@
 // the setup routine runs once when you press reset:
 void setup() {
     pinMode(LED, OUTPUT);       // initialize the digital pin as an output
-    // the setup procedure is executed only once
 }
 
 // the loop routine runs over and over again forever:

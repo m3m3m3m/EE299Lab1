@@ -20,7 +20,7 @@ LiquidCrystal lcd(2, 3, 4, 5, 6, 7, 8);     // Bus 1 of the Seeduino sensor Chas
 // the setup routine runs once when you press reset:
 void setup() {
     lcd.begin(16, 2);                       // 16 * 2 character
-    lcd.print("Man & Muhan");                // print two names on the first row
+    lcd.print("Man & Muhan");               // print two names on the first row
     lcd.setCursor(0, 1);                    // set the cursor to the beginning of the second row
     lcd.print("Mingxiao");                  // print one name
 }
