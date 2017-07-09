@@ -64,11 +64,19 @@ loop while true\{
 start serial port;
 serial printline some own stuff;
 \subparagraph{lab 8}
-print the name of first two members;\\
-move the cursor to the first column of the second row;\\
+print the name of first two members;
+move the cursor to the first column of the second row;
 print the name of the third member;
 \subparagraph{lab 9}
-
+void moveleft();
+void moveright();
+loop()\{
+	if (leftbutton pressed)\{moveleft();\}
+\}
+void moveleft()\{
+	if(can move left)\{move left;\}
+	else if(not first line)\{go to the last space of the prior line;\}
+\}
 \paragraph{Error handling}
 \subsection{Hardware Implementation}
 \subsection{Software Implementation}
