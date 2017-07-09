@@ -1,2 +1,26 @@
 \subsection{Brief Design Specification}
-\phantom{ }
+\subsubsection{Overall summary description of the module}
+%paragraph 2
+In part 2, we will need a module that can work with the LCD and two modules that can communicate, which reflects on the control of the LED of one microprocessor by another. To meet the requirement of being able to work with the LCD, we need the correct control of the content, situation, and moving of the characters printed on the LCD by the module. To meet the requirement of being able to communicate, we need to send data correctly from the master microprocessor to the slaver microprocessor.
+\subsubsection{Specification of the public interface to the module}
+
+\paragraph{Input, Output and Side Effects}
+\subparagraph{Part 1}
+\subparagraph{lab 8} 
+No input is required, the output is the LCD connected to the microprocessor printing two names on the first row of the display and one on the second.
+\subparagraph{lab 9}
+The input is controlled by two peripheral buttons, which can generate high signal by being pressed, and the output is the cursor on the LCD display moving left if one of the button is pressed and to the right if the other is pressed. If the cursor meets the end of the two rows of the LCD display, it will show up at the first column of the second row and can be controlled again.
+\subparagraph{lab 10}
+No input is required, and the output is detected on the Serial Monitor on the PC. If the Serial Monitors of the two microprocessors are opened separately, the slaver's monitor should display the same number series as the master's does. 
+\subparagraph{lab 11}
+The input is controlled by a peripheral button brick connected to the master microprocessor, and the output is the peripheral LED connected to the slaver microprocessor being turned on when the button is pressed, and turned off when the button is released.
+\paragraph{Pseudo English description of algorithms, functions, or procedures}
+\subparagraph{lab 8}
+print the name of first two members;
+move the cursor to the first column of the second row;
+print the name of the third member;
+\subparagraph{lab 9}
+
+\paragraph{Error handling}
+\subsection{Hardware Implementation}
+\subsection{Software Implementation}
