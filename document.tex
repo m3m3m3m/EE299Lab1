@@ -1,6 +1,8 @@
 \documentclass[12pt,letterpaper,onecolumn]{article}
 \usepackage{graphicx}
 \usepackage{minted}
+\usemintedstyle{arduino}
+\setminted[c]{linenos, frame=lines}
 \usepackage{mathptmx}
 \newcommand{\titlefont}{\fontfamily{ptm}\fontseries{b}\fontsize{16pt}{\baselineskip}\selectfont}
 \newcommand{\authorfont}{\fontfamily{ptm}\fontseries{b}\fontsize{14pt}{\baselineskip}\selectfont}
@@ -15,27 +17,16 @@
 \usepackage{titlesec}
 \titleformat*{\section}{\headfont}
 \titleformat*{\subsection}{\headfont}
-\usepackage{listings}
 \usepackage{xcolor}
-\lstset{
-	numbers=left, 
-	basicstyle = \codefont,
-	numberstyle= \tiny, 
-	keywordstyle= \color{ blue!70},
-	commentstyle= \color{red!50!green!50!blue!50}, 
-	frame=single, % 阴影效果
-	rulesepcolor= \color{ red!20!green!20!blue!20} ,
-	escapeinside=``, % 英文分号中可写入中文
-	xleftmargin=0em,xrightmargin=0em, aboveskip=1em,
-	framexleftmargin=2em,framexrightmargin = 2em
-} 
+
+
 \begin{document}
 	\maketitle
 	\thispagestyle{empty}
 	\newpage
 	\tableofcontents
 	\newpage
-	\section{ABASTRACT}	
+	\section{ABSTRACT}	
 	%	The abstract should provide a brief overview of the report - one paragraph at most. 
 	%	
 	%	It should provide a summary of the main specific points for the introduction, the main tests and experiments, the results, and the conclusions. It is called an abstract because you can literally "abstract" sentences from the other sections. 
