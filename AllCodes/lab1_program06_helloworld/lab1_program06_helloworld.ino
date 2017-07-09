@@ -4,8 +4,8 @@
 //  Languange:
 //      Wiring/Arduino
 //  Description:
-//      The program keeps print "hello world 9\nhow ya doin\n" to the
-//      screen monitor with each line waiting for a second.
+//      The program keeps printing "hello world 9\nhow ya doin\n"
+//      to the serial monitor with each line waiting for a second.
 //  Author:
 //      Forked from example code in the public domain
 //      Mingxiao An, Man Sun, Muhan Li
@@ -22,10 +22,9 @@ void setup() {
 
 // the loop routine runs over and over again forever:
 void loop() {
-    Serial.print("hello world ");   // print a string to screen
+    Serial.print("hello world ");   // print a string to the monitor
     Serial.println(i);              // print an integer with return
     delay(1000);                    // wait for a second
     Serial.println("how ya doin");  // print a string with return
     delay(1000);                    // wait for a second
 }
-
