@@ -1,0 +1,25 @@
+\contentsline {section}{\numberline {1}ABASTRACT}{3}
+\contentsline {section}{\numberline {2}INTRODUCTION}{3}
+\contentsline {section}{\numberline {3}DISCUSSION OF THE LAB}{3}
+\contentsline {subsection}{\numberline {3.1}Brief Design Specification}{3}
+\contentsline {subsubsection}{\numberline {3.1.1}Overall summary description of the module}{3}
+\contentsline {subsubsection}{\numberline {3.1.2}Specification of the public interface to the module}{3}
+\contentsline {paragraph}{Input, Output and Side Effects}{3}
+\contentsline {subparagraph}{Part 1}{3}
+\contentsline {subparagraph}{lab 8}{3}
+\contentsline {subparagraph}{lab 9}{3}
+\contentsline {subparagraph}{lab 10}{3}
+\contentsline {subparagraph}{lab 11}{3}
+\contentsline {paragraph}{Pseudo English description of algorithms, functions, or procedures}{3}
+\contentsline {subparagraph}{lab 8}{3}
+\contentsline {subparagraph}{lab 9}{4}
+\contentsline {subparagraph}{lab 10}{4}
+\contentsline {subparagraph}{lab 11}{4}
+\contentsline {subsection}{\numberline {3.2}Hardware Implementation}{4}
+\contentsline {section}{\numberline {4}TESTPLAN}{4}
+\contentsline {paragraph}{Testplan for part 1}{4}
+\contentsline {paragraph}{Testplan for part 2}{4}
+\contentsline {section}{\numberline {5}PRESENTATION, DISCUSSION, AND ANALYSIS OF THE RESULTS}{6}
+\contentsline {section}{\numberline {6}ANALYSIS OF ANY ERRORS}{6}
+\contentsline {section}{\numberline {7}SUMMARY AND CONCLUSIONS}{6}
+\contentsline {section}{\numberline {8}APPENDICES}{6}

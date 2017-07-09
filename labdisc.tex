@@ -20,7 +20,27 @@ print the name of first two members;
 move the cursor to the first column of the second row;
 print the name of the third member;
 \subparagraph{lab 9}
-
-\paragraph{Error handling}
+row = 0;col = 0;
+connect the input pins to variables respectively;
+if the variable related to the left button is high, and if cursor is at the beginning of the second row, move the cursor to the end of the first row, if it is at the beginning of the first row, do nothing, else col -=1 ;
+if the variable related to the right button is high, and if cursor is at the end of the second row, move the cursor to the beginning of the second row, if it is at the end of the first row, move it to the beginning of the second row, else col +=1 ;
+keep doing the checking process with a delay of 300 in each round;
+\subparagraph{lab 10}
+Although the code for this lab is provided on the course website, we will still present the pseudo code.
+x = 0;
+set the correct output port;
+send the value of x ; x¡¡+= 1;
+keep the sending and adding process, with a delay in each round;
+\subparagraph{lab 11}
+lightOn = 0;
+connect the variable lightOn to the control pin of the LED light in the slaver module;slaver module keeps receiving the signal from the master microprocessor and saves its correspondent value into lightOn.
+if the button is pressed, the master sends a byte string representing that the light is on to the slaver, if not, it sends a byte string representing that the light is off to the slaver.
 \subsection{Hardware Implementation}
-\subsection{Software Implementation}
+\begin{figure}
+	\centering
+	\label{fig:1}
+	\includegraphics[width = \linewidth]{images/harware_schem.png}
+	\caption{Schematic of hardware implementation(developed using Fritzing)}
+\end{figure}
+%\subsection{Software Implementation}
+

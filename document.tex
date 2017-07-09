@@ -1,5 +1,6 @@
 \documentclass[12pt,letterpaper,onecolumn]{article}
-
+\usepackage{graphicx}
+\usepackage{minted}
 \usepackage{mathptmx}
 \newcommand{\titlefont}{\fontfamily{ptm}\fontseries{b}\fontsize{16pt}{\baselineskip}\selectfont}
 \newcommand{\authorfont}{\fontfamily{ptm}\fontseries{b}\fontsize{14pt}{\baselineskip}\selectfont}
@@ -12,7 +13,7 @@
 \author{\authorfont Muhan Li,Man Sun,Mingxiao An}
 \date{}
 \usepackage{titlesec}
-\titleformat*{\section}{\headfont\uppercase}
+\titleformat*{\section}{\headfont}
 \titleformat*{\subsection}{\headfont}
 \usepackage{listings}
 \usepackage{xcolor}
@@ -34,17 +35,17 @@
 	\newpage
 	\tableofcontents
 	\newpage
-	\section{Abstract}	
+	\section{ABASTRACT}	
 	%	The abstract should provide a brief overview of the report - one paragraph at most. 
 	%	
 	%	It should provide a summary of the main specific points for the introduction, the main tests and experiments, the results, and the conclusions. It is called an abstract because you can literally "abstract" sentences from the other sections. 
 	%	
 	%	Once again, this is not a narrative of your experiences as you executed the design.  The abstract should mirror (albeit in a very condensed way) the content of your report.	
 		\input{abstract}
-	\section{Introduction}
+	\section{INTRODUCTION}
 	%	Brief introduction and overview of the purpose of the lab and of the methods and tools used - one to two paragraphs at most.
 		\input{intro}
-	\section{Discussion of the Lab}
+	\section{DISCUSSION OF THE LAB}
 	%	This section should include the following:
 	%	
 	%	Brief Design Specification - In this subsection you will textually describe your client's requirements.  What does he or she need in the project you are developing.  If you are incorporating extra features or capabilities, please describe them clearly in this section.
@@ -80,24 +81,24 @@
 	%	
 	%	Identify and discuss the specific modules you have implemented in your design. Explain your design choices.  
 		\input{labdisc}
-	\section{Testplan}
+	\section{TESTPLAN}
 	%	Overall summary of what needs to be tested to ensure that your design meets the original requirements, 2-3 paragraphs maximum unless specified otherwise   
 		\input{testplan}
-	\section{Presentation, Discussion, and Analysis of the Results}
+	\section{PRESENTATION, DISCUSSION, AND ANALYSIS OF THE RESULTS}
 	%	Based upon the execution of your design, present your results. Explain them and what was expected, and draw any conclusions (for example, did this prove your design worked).
 	%	
 	%	In addition to a detailed discussion and analysis of your project and your results, you must include all the answers to all questions raised in the lab.
 		\input{result}
-	\section{Analysis of any Errors}
+	\section{ANALYSIS OF ANY ERRORS}
 	%	This one is obvious. Do this section as appropriate.  If it improves the flow, it does not need to be a separate section and may be included in the presentation, discussion, and analysis of the results.  However, it will still be graded separately and must be present.
 		\input{error}
-	\section{Analysis of Why the Project May not of Worked and What Efforts Were Made to Identify the Root Cause of any Problems}
-	%	State any problems you encountered while working on the project. If your project did not work or worked only partially, provide an analysis of why and what efforts were made to identify the root cause of any problems. Should be written only if your project (or a required component) did not work. 
-		\input{probs}
-	\section{Summary and Conclusion}
+%	\section{ANALYSIS OF WHY THE PROJECT MAY NOT OF WORKED AND WHAT EFFORTS WERE MADE TO IDENTIFY THE ROOT CAUSE OF ANY PROBLEMS}
+%	%	State any problems you encountered while working on the project. If your project did not work or worked only partially, provide an analysis of why and what efforts were made to identify the root cause of any problems. Should be written only if your project (or a required component) did not work. 
+%		\input{probs}
+	\section{SUMMARY AND CONCLUSIONS}
 	%	You should know these sections very well, no need to explain.  Note, however, that they are two different sections.  The summary is just that, a summary of your project.  It should loosely mirror the abstract with a bit more detail.  The conclusion concludes the report, potentially adds information that is often outside the main thrust of the report, and may offer suggestions or recommendations about the project.
 		\input{sum}
-	\section{Appendices}
+	\section{APPENDICES}
 	%	Your final version of any and all pseudocode and C code should go in this section. 
 		\input{code}
 		

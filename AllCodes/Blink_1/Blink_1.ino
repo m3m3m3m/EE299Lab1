@@ -1,4 +1,18 @@
-
+//-----------------------------------------------------------  
+// Module name:  
+//     filename.c  
+// Language:
+//     Wiring/Arduino
+// Description:  
+//    Function counts the number of lines in a C source file.  
+//     Does not count blanklines or comment lines.  
+//    Reports the results to stdout. Also saves the results  
+//    in a data file for further use.  
+//  
+// Author:  
+//    Your Name 
+// Rev. 0 15 March 2013 
+//-----------------------------------------------------------  
 // Pin 13
 int led = 13;
 
